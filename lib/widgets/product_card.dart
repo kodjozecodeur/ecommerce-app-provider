@@ -1,4 +1,6 @@
 import 'package:ecommerce_app_provider/model/product.dart';
+import 'package:ecommerce_app_provider/screens/detail_screen.dart';
+import 'package:ecommerce_app_provider/utils/color_constants.dart';
 import 'package:flutter/material.dart';
 
 class ProductCard extends StatelessWidget {
@@ -8,14 +10,23 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => DetailScreen(
+              product: product,
+            ),
+          ),
+        );
+      },
       child: Stack(
         children: [
           Container(
             width: double.infinity,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: Color(0xFFF6F6F6),
+              color: ColorConstants.kContentColor,
             ),
             child: Column(
               children: [
