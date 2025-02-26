@@ -15,7 +15,9 @@ class CustomDetailAppBar extends StatelessWidget {
               backgroundColor: Colors.white,
               padding: EdgeInsets.all(15),
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
             icon: SvgPicture.asset(
               'assets/icons/arrow_left.svg',
               height: 30,

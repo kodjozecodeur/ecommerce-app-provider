@@ -11,6 +11,7 @@ class CustomDetailImageSlider extends StatelessWidget {
     return SizedBox(
       height: 200,
       child: PageView.builder(
+        onPageChanged: onChange,
         itemBuilder: (context, index) {
           return Image.asset(image);
         },
